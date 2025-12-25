@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Khenvisualz</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        'khen-black': '#0a0a0a',
+                        'khen-dark': '#121212',
+                        'khen-gray': '#262626',
+                        'khen-gold': '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-khen-black text-white antialiased font-sans">
+    
+    <!-- Navbar (Services Active) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="aperture" class="w-6 h-6 text-neutral-100 group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="text-xl font-serif font-bold tracking-wider text-white">KHENVISUALZ</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">Home<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="portfolio.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">Portfolio<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="services.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-white font-medium">Services<span class="absolute -bottom-2 left-0 w-full h-px bg-white"></span></a>
+                <a href="about.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">About<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="contact.html" class="ml-4 px-6 py-2 bg-white text-black text-sm uppercase tracking-wider font-medium hover:bg-neutral-200 transition-colors">Book Now</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out translate-x-full">
+            <button id="menu-close" class="absolute top-8 right-6 text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <a href="index.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Home</a>
+            <a href="portfolio.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-3xl font-serif font-light text-white italic">Services</a>
+            <a href="about.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">About</a>
+            <a href="contact.html" class="mt-8 px-8 py-3 bg-white text-black text-lg uppercase tracking-wider font-medium">Book a Session</a>
+        </div>
+    </nav>
+
+    <div class="min-h-screen bg-khen-black pt-20">
+        <div class="py-20 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="text-4xl md:text-6xl font-serif text-white mb-6">Invest in Quality</h1>
+                <p class="text-neutral-400 max-w-2xl mx-auto text-lg font-light">Transparent pricing packages designed to meet your specific needs. For custom projects, please get in touch.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="relative flex flex-col p-8 md:p-12 border border-neutral-800 bg-khen-dark hover:border-neutral-600 rounded-sm transition-all duration-300">
+                    <h3 class="text-2xl font-serif text-white mb-2">The Portrait</h3>
+                    <!-- <div class="text-4xl font-light text-white mb-4">$250</div> -->
+                    <p class="text-neutral-400 text-sm mb-8 leading-relaxed border-b border-neutral-800 pb-8">Ideal for individuals, linkedin profiles, or creative headshots.</p>
+                    <ul class="flex-grow space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> 1 Hour Session</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Individual & Group Sessions</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Professional Retouching</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Studio or Location Shoot</li>
+                        <!-- <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Print Release</li> -->
+                    </ul>
+                    <a href="contact.html" class="w-full py-4 text-center uppercase tracking-widest text-sm font-medium transition-colors bg-transparent border border-neutral-700 text-white hover:bg-neutral-800">Book This</a>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="relative flex flex-col p-8 md:p-12 border border-white bg-white/5 scale-105 z-10 rounded-sm transition-all duration-300">
+                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black text-xs font-bold uppercase tracking-widest py-1 px-4">Most Popular</div>
+                    <h3 class="text-2xl font-serif text-white mb-2">The Event</h3>
+                    <!-- <div class="text-4xl font-light text-white mb-4">$500</div> -->
+                    <p class="text-neutral-400 text-sm mb-8 leading-relaxed border-b border-neutral-800 pb-8">Comprehensive coverage for corporate events, parties, or weddings.</p>
+                    <ul class="flex-grow space-y-4 mb-8">
+                         <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Full day coverage</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Unlimited Outfits</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Creative Direction & Moodboard</li>
+                         <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Second Shooter Available</li>
+                         <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Next Day Preview</li>
+                    </ul>
+                    <a href="contact.html" class="w-full py-4 text-center uppercase tracking-widest text-sm font-medium transition-colors bg-white text-black hover:bg-neutral-200">Book This</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="relative flex flex-col p-8 md:p-12 border border-neutral-800 bg-khen-dark hover:border-neutral-600 rounded-sm transition-all duration-300">
+                    <h3 class="text-2xl font-serif text-white mb-2">Photo Editing</h3>
+                    <!-- <div class="text-4xl font-light text-white mb-4">$1200+</div> -->
+                    <p class="text-neutral-400 text-sm mb-8 leading-relaxed border-b border-neutral-800 pb-8">Professional photo editing and retouching services to enhance and perfect your images.</p>
+                    <ul class="flex-grow space-y-4 mb-8">
+                         <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Color Correction</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Advanced Retouching</li>
+                        <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Creative Compositing</li>
+                         <!-- <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Highlight Reel (Video)</li> -->
+                         <li class="flex items-start gap-3 text-neutral-300 text-sm"><i data-lucide="check" class="w-5 h-5 text-neutral-500 shrink-0"></i> Next Day Preview</li>
+                    </ul>
+                    <a href="contact.html" class="w-full py-4 text-center uppercase tracking-widest text-sm font-medium transition-colors bg-transparent border border-neutral-700 text-white hover:bg-neutral-800">Book This</a>
+                </div>
+            </div>
+
+             <!-- FAQ Section Lite -->
+            <div class="mt-32 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-serif text-white mb-12 text-center">Common Questions</h2>
+                <div class="space-y-8">
+                    <div class="border-b border-neutral-800 pb-8">
+                        <h3 class="text-lg text-white mb-2">How do I secure a date?</h3>
+                        <p class="text-neutral-400 font-light">A 50% non-refundable deposit is required to secure your booking date, with the remainder due 24 hours before the shoot.</p>
+                    </div>
+                    <div class="border-b border-neutral-800 pb-8">
+                        <h3 class="text-lg text-white mb-2">Do you travel?</h3>
+                        <p class="text-neutral-400 font-light">Yes! I am based in Nigeria but available worldwide. Travel fees are calculated based on location and accommodation requirements.</p>
+                    </div>
+                    <div class="border-b border-neutral-800 pb-8">
+                        <h3 class="text-lg text-white mb-2">What is your turnaround time?</h3>
+                        <p class="text-neutral-400 font-light">For standard sessions, 2-4 days. For weddings and large events, 1-2 weeks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-khen-dark border-t border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-serif font-bold text-white mb-6">KHENVISUALZ</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Capturing moments that speak louder than words. Specialized in editorial, portrait, event photography, and photo editing.</p>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Contact</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="mailto:khenvisualz@gmail.com">khenvisualz@gmail.com</a></li>
+                        <li><a href="tel:+2347015281435">+234 701 528 1435</a></li>
+                        <li>Nigeria</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Social</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/khen_visualz" target="_blank" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        
+                        <!-- <a href="https://www.tiktok.com/@khen_visualz" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="tiktok" class="w-5 h-5"></i></a> -->
+                        <a href="https://www.tiktok.com/@khen_visualz" target="_blank" aria-label="Visit us on TikTok">
+                            <!-- Font Awesome 6 example -->
+                            <i class="fab fa-tiktok fa-2x"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 uppercase tracking-wider">
+                <p>&copy; 2025 Khenvisualz. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with purpose.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

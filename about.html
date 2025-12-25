@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Khenvisualz</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Khen",
+      "alternateName": "Khenvisualz",
+      "jobTitle": "Professional Photographer",
+      "url": "https://khenvisualz.com",
+      "image": "https://picsum.photos/800/1200?random=50",
+      "description": "Visual Storyteller specialized in editorial, portrait, and event photography based in New York.",
+      "sameAs": [
+        "https://instagram.com",
+        "https://twitter.com",
+        "https://linkedin.com"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        'khen-black': '#0a0a0a',
+                        'khen-dark': '#121212',
+                        'khen-gray': '#262626',
+                        'khen-gold': '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-khen-black text-white antialiased font-sans">
+    
+    <!-- Navbar (About Active) -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="aperture" class="w-6 h-6 text-neutral-100 group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="text-xl font-serif font-bold tracking-wider text-white">KHENVISUALZ</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">Home<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="portfolio.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">Portfolio<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="services.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">Services<span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span></a>
+                <a href="about.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-white font-medium">About<span class="absolute -bottom-2 left-0 w-full h-px bg-white"></span></a>
+                <a href="contact.html" class="ml-4 px-6 py-2 bg-white text-black text-sm uppercase tracking-wider font-medium hover:bg-neutral-200 transition-colors">Book Now</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out translate-x-full">
+            <button id="menu-close" class="absolute top-8 right-6 text-white"><i data-lucide="x" class="w-8 h-8"></i></button>
+            <a href="index.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Home</a>
+            <a href="portfolio.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Services</a>
+            <a href="about.html" class="text-3xl font-serif font-light text-white italic">About</a>
+            <a href="contact.html" class="mt-8 px-8 py-3 bg-white text-black text-lg uppercase tracking-wider font-medium">Book a Session</a>
+        </div>
+    </nav>
+
+    <div class="min-h-screen pt-20">
+         <!-- Intro -->
+         <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh]">
+            <div class="order-2 md:order-1 relative h-[50vh] md:h-full">
+                <img src="https://picsum.photos/800/1200?random=50" alt="Photographer Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+            <div class="order-1 md:order-2 flex items-center justify-center p-8 md:p-20 bg-khen-black">
+                <div>
+                    <span class="block text-sm text-neutral-400 uppercase tracking-widest mb-6">The Photographer</span>
+                    <h1 class="text-4xl md:text-6xl font-serif text-white mb-8 leading-tight">
+                        Hello, I'm Kenny. <br />
+                        <span class="italic text-neutral-500">Visual Storyteller.</span>
+                    </h1>
+                    <div class="space-y-6 text-neutral-300 font-light text-lg leading-relaxed max-w-md">
+                        <p>My journey with the camera began as a way to document the subtle nuances of daily life that often go unnoticed. Over the last decade, this curiosity has evolved into a dedicated pursuit of visual excellence.</p>
+                        <p>I believe that every face has a story, and every space has a soul. My approach is rooted in making you feel comfortable enough to reveal your authentic self.</p>
+                        <p>Whether it's portraits or an intimate wedding, I bring the same level of passion, precision, and artistry to every frame.</p>
+                    </div>
+                    <!-- <div class="mt-10">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Signature_sample.svg" alt="Signature" class="h-12 invert opacity-70">
+                    </div> -->
+                </div>
+            </div>
+         </div>
+
+         <!-- Stats/Facts -->
+         <div class="bg-khen-dark py-20 border-y border-neutral-900">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <span class="block text-4xl md:text-5xl text-white font-serif mb-2">10+</span>
+                    <span class="text-xs uppercase tracking-widest text-neutral-500">Years Experience</span>
+                </div>
+                <div>
+                    <span class="block text-4xl md:text-5xl text-white font-serif mb-2">300+</span>
+                    <span class="text-xs uppercase tracking-widest text-neutral-500">Projects Completed</span>
+                </div>
+                <div>
+                    <span class="block text-4xl md:text-5xl text-white font-serif mb-2">250</span>
+                    <span class="text-xs uppercase tracking-widest text-neutral-500">Happy Clients</span>
+                </div>
+                <div>
+                    <span class="block text-4xl md:text-5xl text-white font-serif mb-2">100%</span>
+                    <span class="text-xs uppercase tracking-widest text-neutral-500">Client Satisfaction</span>
+                </div>
+            </div>
+         </div>
+
+         <!-- CTA -->
+         <div class="py-24 text-center">
+            <h2 class="text-3xl font-serif text-white mb-8">Ready to create something iconic?</h2>
+            <a href="contact.html" class="px-10 py-4 bg-white text-black uppercase tracking-widest font-medium hover:bg-neutral-200 transition-colors inline-block">Let's Talk</a>
+         </div>
+    </div>
+
+    <footer class="bg-khen-dark border-t border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-serif font-bold text-white mb-6">KHENVISUALZ</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Capturing moments that speak louder than words. Specialized in editorial, portrait, event photography, and photo editing.</p>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Contact</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="mailto:khenvisualz@gmail.com">khenvisualz@gmail.com</a></li>
+                        <li><a href="tel:+2347015281435">+234 701 528 1435</a></li>
+                        <li>Nigeria</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Social</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/khen_visualz" target="_blank" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        
+                        <!-- <a href="https://www.tiktok.com/@khen_visualz" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="tiktok" class="w-5 h-5"></i></a> -->
+                        <a href="https://www.tiktok.com/@khen_visualz" target="_blank" aria-label="Visit us on TikTok">
+                            <!-- Font Awesome 6 example -->
+                            <i class="fab fa-tiktok fa-2x"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 uppercase tracking-wider">
+                <p>&copy; 2025 Khenvisualz. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with purpose.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

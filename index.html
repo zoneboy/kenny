@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Khenvisualz</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        'khen-black': '#0a0a0a',
+                        'khen-dark': '#121212',
+                        'khen-gray': '#262626',
+                        'khen-gold': '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-khen-black text-white antialiased font-sans">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <i data-lucide="aperture" class="w-6 h-6 text-neutral-100 group-hover:rotate-180 transition-transform duration-700"></i>
+                <span class="text-xl font-serif font-bold tracking-wider text-white">KHENVISUALZ</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-white font-medium">
+                    Home
+                    <span class="absolute -bottom-2 left-0 w-full h-px bg-white"></span>
+                </a>
+                <a href="portfolio.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">
+                    Portfolio
+                    <span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">
+                    Services
+                    <span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="text-sm tracking-widest uppercase transition-colors duration-300 relative group text-neutral-400 hover:text-white">
+                    About
+                    <span class="absolute -bottom-2 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="ml-4 px-6 py-2 bg-white text-black text-sm uppercase tracking-wider font-medium hover:bg-neutral-200 transition-colors">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-500 ease-in-out translate-x-full">
+            <button id="menu-close" class="absolute top-8 right-6 text-white">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <a href="index.html" class="text-3xl font-serif font-light text-white italic">Home</a>
+            <a href="portfolio.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Portfolio</a>
+            <a href="services.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">Services</a>
+            <a href="about.html" class="text-3xl font-serif font-light text-neutral-500 hover:text-white">About</a>
+            <a href="contact.html" class="mt-8 px-8 py-3 bg-white text-black text-lg uppercase tracking-wider font-medium">Book a Session</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="./image/bano.png" alt="Hero Background" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-t from-khen-black via-khen-black/40 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
+            <div class="max-w-3xl">
+                <p class="text-sm md:text-base text-neutral-300 uppercase tracking-[0.2em] mb-4">Photography & Art Direction</p>
+                <h1 class="text-5xl md:text-7xl lg:text-9xl font-serif text-white leading-tight mb-8">
+                    Seeing the <br/>
+                    <span class="italic font-light text-neutral-400">Unseen.</span>
+                </h1>
+                <p class="text-lg text-neutral-300 mb-10 max-w-lg leading-relaxed font-light">
+                    Crafting visual narratives that resonate. Khenvisualz brings a unique perspective to portraits, fashion, and events.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="portfolio.html" class="px-8 py-4 bg-white text-black uppercase tracking-wider font-medium hover:bg-neutral-200 transition-colors inline-flex items-center justify-center gap-2">
+                        View Portfolio <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="contact.html" class="px-8 py-4 border border-white/30 text-white uppercase tracking-wider font-medium hover:bg-white/10 transition-colors inline-flex items-center justify-center">
+                        Book a Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Works -->
+    <section class="py-24 bg-khen-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Selected Works</h2>
+                    <p className="text-neutral-400 max-w-sm">Curated visual stories from recent projects.</p>
+                </div>
+                <a href="portfolio.html" class="hidden md:flex items-center gap-2 text-white border-b border-white/50 pb-1 hover:border-white transition-all mt-6 md:mt-0">
+                    View All Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Added id="selected-works-grid" for JS targeting -->
+            <div id="selected-works-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[400px]">
+                <div class="group relative overflow-hidden md:col-span-2">
+                    <img src="./image/6.jpg" alt="Project 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <p class="text-sm text-neutral-300 uppercase tracking-wider mb-2">Editorial</p>
+                            <h3 class="text-2xl font-serif text-white">Urban Solitude</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden">
+                    <img src="./image/1.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <p class="text-sm text-neutral-300 uppercase tracking-wider mb-2">Portrait</p>
+                            <h3 class="text-2xl font-serif text-white">The Golden Hour</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden">
+                    <img src="./image/2.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <p class="text-sm text-neutral-300 uppercase tracking-wider mb-2">Graduation</p>
+                            <h3 class="text-2xl font-serif text-white">Chrome Series</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden md:col-span-2">
+                    <img src="./image/9.jpg" alt="Project 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div>
+                            <p class="text-sm text-neutral-300 uppercase tracking-wider mb-2">Events</p>
+                            <h3 class="text-2xl font-serif text-white">Neon Nights Gala</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="mt-8 text-center md:hidden">
+                <a href="portfolio.html" class="inline-flex items-center gap-2 text-white border-b border-white/50 pb-1 hover:border-white transition-all">
+                  View All Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="py-24 bg-khen-dark border-t border-neutral-900">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="bg-neutral-900/50 p-8 rounded-sm hover:-translate-y-2 transition-transform duration-300 border border-neutral-800">
+                <i data-lucide="camera" class="w-10 h-10 text-neutral-200 mb-6"></i>
+                <h3 class="text-xl font-serif text-white mb-4">Visionary Perspective</h3>
+                <p class="text-neutral-400 leading-relaxed">I don't just take pictures; I create images that evoke emotion and tell a compelling story without words.</p>
+            </div>
+            <div class="bg-neutral-900/50 p-8 rounded-sm hover:-translate-y-2 transition-transform duration-300 border border-neutral-800">
+                <i data-lucide="zap" class="w-10 h-10 text-neutral-200 mb-6"></i>
+                <h3 class="text-xl font-serif text-white mb-4">Modern Aesthetics</h3>
+                <p class="text-neutral-400 leading-relaxed">Staying ahead of visual trends while maintaining timeless elegance. My editing style is crisp, clean, and unique.</p>
+            </div>
+            <div class="bg-neutral-900/50 p-8 rounded-sm hover:-translate-y-2 transition-transform duration-300 border border-neutral-800">
+                <i data-lucide="award" class="w-10 h-10 text-neutral-200 mb-6"></i>
+                <h3 class="text-xl font-serif text-white mb-4">Professional Service</h3>
+                <p class="text-neutral-400 leading-relaxed">From the initial consultation to final delivery, experience a seamless, professional, and dedicated workflow.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="py-24 bg-khen-black">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-serif text-white mb-4">Client Stories</h2>
+            <p className="text-neutral-400">Experiences from those who have stepped in front of the lens.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-neutral-900/20 p-8 border border-neutral-800/50 relative hover:border-neutral-700 transition-colors duration-300">
+                <i data-lucide="quote" class="w-8 h-8 text-white/20 mb-6"></i>
+                <p class="text-neutral-300 italic mb-8 leading-relaxed font-light">"Khen has an uncanny ability to find the perfect angle. The editorial shoot for our summer collection was flawless. A true visionary."</p>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-white font-serif font-bold">E</div>
+                  <div>
+                    <p class="text-white font-serif text-lg">Elena Rodriguez</p>
+                    <p class="text-neutral-500 text-xs uppercase tracking-widest">Creative Director</p>
+                  </div>
+                </div>
+            </div>
+            <div class="bg-neutral-900/20 p-8 border border-neutral-800/50 relative hover:border-neutral-700 transition-colors duration-300">
+                <i data-lucide="quote" class="w-8 h-8 text-white/20 mb-6"></i>
+                <p class="text-neutral-300 italic mb-8 leading-relaxed font-light">"I needed portraits that spoke to my work's precision. Khen delivered images that were both professional and deeply artistic."</p>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-white font-serif font-bold">D</div>
+                  <div>
+                    <p class="text-white font-serif text-lg">David Chen</p>
+                    <p class="text-neutral-500 text-xs uppercase tracking-widest">Architect</p>
+                  </div>
+                </div>
+            </div>
+            <div class="bg-neutral-900/20 p-8 border border-neutral-800/50 relative hover:border-neutral-700 transition-colors duration-300">
+                <i data-lucide="quote" class="w-8 h-8 text-white/20 mb-6"></i>
+                <p class="text-neutral-300 italic mb-8 leading-relaxed font-light">"He didn't just take photos; he captured the emotions of the day. Looking through our wedding album feels like reliving the magic."</p>
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center text-white font-serif font-bold">S</div>
+                  <div>
+                    <p class="text-white font-serif text-lg">Sarah Jenkins</p>
+                    <p class="text-neutral-500 text-xs uppercase tracking-widest">Bride</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <footer class="bg-khen-dark border-t border-neutral-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-serif font-bold text-white mb-6">KHENVISUALZ</h3>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-6">Capturing moments that speak louder than words. Specialized in editorial, portrait, event photography, and photo editing.</p>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Contact</h4>
+                    <ul class="space-y-4 text-sm text-neutral-400">
+                        <li><a href="mailto:khenvisualz@gmail.com">khenvisualz@gmail.com</a></li>
+                        <li><a href="tel:+2347015281435">+234 701 528 1435</a></li>
+                        <li>Nigeria</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h4 class="text-white font-medium mb-6 uppercase text-xs tracking-widest">Social</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/khen_visualz" target="_blank" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        
+                        <!-- <a href="https://www.tiktok.com/@khen_visualz" class="p-2 bg-neutral-800 rounded-full hover:bg-white hover:text-black transition-all duration-300"><i data-lucide="tiktok" class="w-5 h-5"></i></a> -->
+                        <a href="https://www.tiktok.com/@khen_visualz" target="_blank" aria-label="Visit us on TikTok">
+                            <!-- Font Awesome 6 example -->
+                            <i class="fab fa-tiktok fa-2x"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-600 uppercase tracking-wider">
+                <p>&copy; 2025 Khenvisualz. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with purpose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
