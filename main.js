@@ -109,3 +109,61 @@ lightboxTriggers.forEach(trigger => {
         }
     });
 });
+
+// --- Contact Form Handling ---
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const formResult = document.getElementById('form-result');
+
+if(form && submitBtn) {
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = 'Sending...';
+        submitBtn.disabled = true;
+        formResult.classList.add('hidden');
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            });
+            
+            const result = await response.json();
+            
+            if (response.status === 200) {
+                formResult.innerText = "Thank you! Your inquiry has been sent successfully.";
+                formResult.classList.remove('hidden', 'text-red-500');
+                formResult.classList.add('text-green-500');
+                form.reset();
+            } else {
+                console.log(response);
+                formResult.innerText = result.message || "Something went wrong. Please try again.";
+                formResult.classList.remove('hidden', 'text-green-500');
+                formResult.classList.add('text-red-500');
+            }
+        } catch (error) {
+            console.log(error);
+            formResult.innerText = "Connection error. Please check your internet.";
+            formResult.classList.remove('hidden', 'text-green-500');
+            formResult.classList.add('text-red-500');
+        } finally {
+            submitBtn.innerText = originalText;
+            submitBtn.disabled = false;
+            // Clear success message after 5 seconds
+            if(formResult.classList.contains('text-green-500')) {
+                setTimeout(() => {
+                    formResult.classList.add('hidden');
+                }, 5000);
+            }
+        }
+    });
+}
